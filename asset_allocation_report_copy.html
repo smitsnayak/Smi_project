@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title>Asset Allocation Report</title>
+
+        <style>
+
+.header{
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 25px;
+  font-weight: bold;
+  color: solid black;
+  }
+
+h1 {
+  border-bottom: 3px solid black;
+
+}
+
+
+body{
+    margin-left: 150px;
+    margin-right: 100px;
+    margin-bottom: 15px;
+    background-position: centre;
+    background-size: contain;
+
+}
+
+
+table {border: 1px solid black;
+  width: 100%;
+}
+
+.table1 {border: 1px solid black;
+  width: 100%;
+}
+
+
+
+
+.table0 th, td {border-collapse: collapse;background-color: #f2f2f2;}
+.table0 th, td {border: 1px solid #ddd;padding: 3px;}
+.table0 tr:nth-child(even){background-color: #f2f2f2;}
+.table0 tr:hover {background-color: #ddd;}
+.table0 th {padding-top: 1px;padding-bottom: 1px; text-align: left; background-color: brown;color: white;}
+
+
+.table1 th, td {border-collapse: collapse;background-color: #f2f2f2;}
+.table1 th, td {border: 1px solid #ddd;}
+.table1 tr:nth-child(even){background-color: #f2f2f2;}
+.table1 tr:hover {background-color: #ddd;}
+.table1 th {padding-top: 1px;padding-bottom: 1px; text-align: left; background-color: #04AA6D;color: white;}
+
+
+.table2 th, td {border-collapse: collapse;background-color: #f2f2f2;}
+.table2 th, td {border: 1px solid #ddd;padding: 3px;}
+.table2 tr:nth-child(even){background-color: #f2f2f2;}
+.table2 tr:hover {background-color: #ddd;}
+.table2 th {padding-top: 1px;padding-bottom: 1px; text-align: left; background-color: orangered;color: white;}
+
+
+.table3 th, td {border-collapse: collapse;background-color: #f2f2f2;}
+.table3 th, td {border: 1px solid #ddd;padding: 3px;}
+.table3 tr:nth-child(even){background-color: #f2f2f2;}
+.table3 tr:hover {background-color: #ddd;}
+.table3 th {padding-top: 1px;padding-bottom: 1px; text-align: left; background-color: blue;color: white;}
+
+        * {
+  box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+figure{border: 1px solid black;
+  width: 100%;
+ }
+
+.fig {
+  float: left;
+  width: 30%;
+  padding: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: blue;
+}
+
+.tab::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container { overflow: hidden; }
+
+.all_tables {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.sub_table {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+.sub_tables {
+  float: left;
+  width: 25%;
+  padding: 1px;
+}
+
+.all_tables::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+        </style>
+    </head>
+    <body>
+
+    <div class="header">
+    <h1>Asset Allocation Report</h1>
+    </div>
+
+
+    <div class="all_tables">
+        <div class="sub_tables">
+            <table class="table0">
+            <tr>
+                <th>
+                    <td>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Investment Goal ID</th>
+      <th>Investment Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>safety_net</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>passive_income</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>build_wealth</td>
+    </tr>
+  </tbody>
+</table>
+            </td>
+                </th>
+            </tr>
+            </table>
+        </div>
+         <div class="sub_tables">
+             <table class="table0">
+                <tr>
+                    <th>
+                        <td>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Subsciption Plan ID</th>
+      <th>subscription_plan_cd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>bronze</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>silver</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>gold</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>platinum</td>
+    </tr>
+  </tbody>
+</table>
+                </td>
+                    </th>
+                </tr>
+             </table>
+
+        </div>
+         <div class="sub_tables">
+             <table class="table0">
+                 <tr>
+                     <th>
+                         <td>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Risk Profile ID</th>
+      <th>Risk Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>risk_averse</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>moderate_averse</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>moderate_aggressive</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>aggressive</td>
+    </tr>
+  </tbody>
+</table>
+                 </td>
+                     </th>
+                 </tr>
+             </table>
+
+        </div>
+         <div class="sub_tables">
+             <table class="table0">
+                 <tr>
+                     <th>
+                         <td>
+                      <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Optimization Method ID</th>
+      <th>optimization_method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>mvo_max_sharpe</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>mvo_minimize_variance</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>mvo_maximize_return_subject_to</td>
+    </tr>
+  </tbody>
+</table>
+                 </td>
+                     </th>
+
+                 </tr>
+
+             </table>
+
+        </div>
+    </div>
+
+
+
+            <h2>Portfolio Asset Allocation</h2>
+          <P><strong><em>BUILD WEALTH / BRONZE / MVO_MAX_SHARPE </em></strong></P>
+    <table class="table1">
+        <th><td><style type="text/css">
+#T_112f8_row0_col1, #T_112f8_row0_col5, #T_112f8_row0_col7, #T_112f8_row0_col9, #T_112f8_row1_col1, #T_112f8_row1_col5, #T_112f8_row1_col9, #T_112f8_row2_col1, #T_112f8_row2_col5, #T_112f8_row2_col7, #T_112f8_row2_col9 {
+  background-color: yellow;
+}
+</style>
+<table id="T_112f8">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_112f8_level0_col0" class="col_heading level0 col0" colspan="2">Risk Averse</th>
+      <th id="T_112f8_level0_col2" class="col_heading level0 col2" colspan="2">Risk Moderate</th>
+      <th id="T_112f8_level0_col4" class="col_heading level0 col4" colspan="2">Moderate</th>
+      <th id="T_112f8_level0_col6" class="col_heading level0 col6" colspan="2">Moderate Aggressive</th>
+      <th id="T_112f8_level0_col8" class="col_heading level0 col8" colspan="2">Aggressive</th>
+    </tr>
+    <tr>
+      <th class="blank level1" >&nbsp;</th>
+      <th id="T_112f8_level1_col0" class="col_heading level1 col0" >March 31</th>
+      <th id="T_112f8_level1_col1" class="col_heading level1 col1" >Feb 28</th>
+      <th id="T_112f8_level1_col2" class="col_heading level1 col2" >March 31</th>
+      <th id="T_112f8_level1_col3" class="col_heading level1 col3" >Feb 28</th>
+      <th id="T_112f8_level1_col4" class="col_heading level1 col4" >March 31</th>
+      <th id="T_112f8_level1_col5" class="col_heading level1 col5" >Feb 28</th>
+      <th id="T_112f8_level1_col6" class="col_heading level1 col6" >March 31</th>
+      <th id="T_112f8_level1_col7" class="col_heading level1 col7" >Feb 28</th>
+      <th id="T_112f8_level1_col8" class="col_heading level1 col8" >March 31</th>
+      <th id="T_112f8_level1_col9" class="col_heading level1 col9" >Feb 28</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Instrument Symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+      <th class="blank col9" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_112f8_level0_row0" class="row_heading level0 row0" >VT</th>
+      <td id="T_112f8_row0_col0" class="data row0 col0" >84.61%</td>
+      <td id="T_112f8_row0_col1" class="data row0 col1" >0.06%</td>
+      <td id="T_112f8_row0_col2" class="data row0 col2" >84.61%</td>
+      <td id="T_112f8_row0_col3" class="data row0 col3" >84.61%</td>
+      <td id="T_112f8_row0_col4" class="data row0 col4" >84.61%</td>
+      <td id="T_112f8_row0_col5" class="data row0 col5" >0.00%</td>
+      <td id="T_112f8_row0_col6" class="data row0 col6" >84.61%</td>
+      <td id="T_112f8_row0_col7" class="data row0 col7" >93.00%</td>
+      <td id="T_112f8_row0_col8" class="data row0 col8" >84.61%</td>
+      <td id="T_112f8_row0_col9" class="data row0 col9" >0.00%</td>
+    </tr>
+    <tr>
+      <th id="T_112f8_level0_row1" class="row_heading level0 row1" >BNDW</th>
+      <td id="T_112f8_row1_col0" class="data row1 col0" >0.00%</td>
+      <td id="T_112f8_row1_col1" class="data row1 col1" >94.94%</td>
+      <td id="T_112f8_row1_col2" class="data row1 col2" >0.00%</td>
+      <td id="T_112f8_row1_col3" class="data row1 col3" >0.00%</td>
+      <td id="T_112f8_row1_col4" class="data row1 col4" >0.00%</td>
+      <td id="T_112f8_row1_col5" class="data row1 col5" >93.00%</td>
+      <td id="T_112f8_row1_col6" class="data row1 col6" >0.00%</td>
+      <td id="T_112f8_row1_col7" class="data row1 col7" >0.00%</td>
+      <td id="T_112f8_row1_col8" class="data row1 col8" >0.00%</td>
+      <td id="T_112f8_row1_col9" class="data row1 col9" >92.00%</td>
+    </tr>
+    <tr>
+      <th id="T_112f8_level0_row2" class="row_heading level0 row2" >VNQ</th>
+      <td id="T_112f8_row2_col0" class="data row2 col0" >15.39%</td>
+      <td id="T_112f8_row2_col1" class="data row2 col1" >5.00%</td>
+      <td id="T_112f8_row2_col2" class="data row2 col2" >15.39%</td>
+      <td id="T_112f8_row2_col3" class="data row2 col3" >15.39%</td>
+      <td id="T_112f8_row2_col4" class="data row2 col4" >15.39%</td>
+      <td id="T_112f8_row2_col5" class="data row2 col5" >7.00%</td>
+      <td id="T_112f8_row2_col6" class="data row2 col6" >15.39%</td>
+      <td id="T_112f8_row2_col7" class="data row2 col7" >7.00%</td>
+      <td id="T_112f8_row2_col8" class="data row2 col8" >15.39%</td>
+      <td id="T_112f8_row2_col9" class="data row2 col9" >8.00%</td>
+    </tr>
+  </tbody>
+</table>
+</td></th>
+
+        </table>
+
+    <p>
+       <div class="all_tables">
+        <div class="sub_table">
+            <img src=risk_averse.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=risk_moderate.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=moderate.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=moderate_aggressive.png width="500" class="center" border="3px blue">
+
+        </div>
+           <div class="sub_table">
+            <img src=aggressive.png width="500" class="center" border="3px blue">
+
+        </div>
+
+    </div>
+</p>
+
+
+    <P><strong><em>BUILD WEALTH / BRONZE / MVO_MINIMIZE_VARIANCE </em></strong></P>
+    <table class="table2">
+            <th><td><style type="text/css">
+#T_efd85_row0_col3, #T_efd85_row0_col5, #T_efd85_row0_col7, #T_efd85_row1_col3, #T_efd85_row1_col5, #T_efd85_row1_col7, #T_efd85_row2_col3, #T_efd85_row2_col5, #T_efd85_row2_col7 {
+  background-color: yellow;
+}
+</style>
+<table id="T_efd85">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_efd85_level0_col0" class="col_heading level0 col0" colspan="2">Risk Averse</th>
+      <th id="T_efd85_level0_col2" class="col_heading level0 col2" colspan="2">Risk Moderate</th>
+      <th id="T_efd85_level0_col4" class="col_heading level0 col4" colspan="2">Moderate</th>
+      <th id="T_efd85_level0_col6" class="col_heading level0 col6" colspan="2">Moderate Aggressive</th>
+      <th id="T_efd85_level0_col8" class="col_heading level0 col8" colspan="2">Aggressive</th>
+    </tr>
+    <tr>
+      <th class="blank level1" >&nbsp;</th>
+      <th id="T_efd85_level1_col0" class="col_heading level1 col0" >March 31</th>
+      <th id="T_efd85_level1_col1" class="col_heading level1 col1" >Feb 28</th>
+      <th id="T_efd85_level1_col2" class="col_heading level1 col2" >March 31</th>
+      <th id="T_efd85_level1_col3" class="col_heading level1 col3" >Feb 28</th>
+      <th id="T_efd85_level1_col4" class="col_heading level1 col4" >March 31</th>
+      <th id="T_efd85_level1_col5" class="col_heading level1 col5" >Feb 28</th>
+      <th id="T_efd85_level1_col6" class="col_heading level1 col6" >March 31</th>
+      <th id="T_efd85_level1_col7" class="col_heading level1 col7" >Feb 28</th>
+      <th id="T_efd85_level1_col8" class="col_heading level1 col8" >March 31</th>
+      <th id="T_efd85_level1_col9" class="col_heading level1 col9" >Feb 28</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Instrument Symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+      <th class="blank col9" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_efd85_level0_row0" class="row_heading level0 row0" >VT</th>
+      <td id="T_efd85_row0_col0" class="data row0 col0" >0.06%</td>
+      <td id="T_efd85_row0_col1" class="data row0 col1" >0.06%</td>
+      <td id="T_efd85_row0_col2" class="data row0 col2" >0.00%</td>
+      <td id="T_efd85_row0_col3" class="data row0 col3" >95.00%</td>
+      <td id="T_efd85_row0_col4" class="data row0 col4" >0.00%</td>
+      <td id="T_efd85_row0_col5" class="data row0 col5" >84.61%</td>
+      <td id="T_efd85_row0_col6" class="data row0 col6" >0.00%</td>
+      <td id="T_efd85_row0_col7" class="data row0 col7" >84.61%</td>
+      <td id="T_efd85_row0_col8" class="data row0 col8" >0.00%</td>
+      <td id="T_efd85_row0_col9" class="data row0 col9" >0.00%</td>
+    </tr>
+    <tr>
+      <th id="T_efd85_level0_row1" class="row_heading level0 row1" >BNDW</th>
+      <td id="T_efd85_row1_col0" class="data row1 col0" >94.94%</td>
+      <td id="T_efd85_row1_col1" class="data row1 col1" >94.94%</td>
+      <td id="T_efd85_row1_col2" class="data row1 col2" >93.00%</td>
+      <td id="T_efd85_row1_col3" class="data row1 col3" >0.00%</td>
+      <td id="T_efd85_row1_col4" class="data row1 col4" >92.00%</td>
+      <td id="T_efd85_row1_col5" class="data row1 col5" >0.00%</td>
+      <td id="T_efd85_row1_col6" class="data row1 col6" >91.00%</td>
+      <td id="T_efd85_row1_col7" class="data row1 col7" >0.00%</td>
+      <td id="T_efd85_row1_col8" class="data row1 col8" >90.00%</td>
+      <td id="T_efd85_row1_col9" class="data row1 col9" >90.00%</td>
+    </tr>
+    <tr>
+      <th id="T_efd85_level0_row2" class="row_heading level0 row2" >VNQ</th>
+      <td id="T_efd85_row2_col0" class="data row2 col0" >5.00%</td>
+      <td id="T_efd85_row2_col1" class="data row2 col1" >5.00%</td>
+      <td id="T_efd85_row2_col2" class="data row2 col2" >7.00%</td>
+      <td id="T_efd85_row2_col3" class="data row2 col3" >5.00%</td>
+      <td id="T_efd85_row2_col4" class="data row2 col4" >8.00%</td>
+      <td id="T_efd85_row2_col5" class="data row2 col5" >15.39%</td>
+      <td id="T_efd85_row2_col6" class="data row2 col6" >9.00%</td>
+      <td id="T_efd85_row2_col7" class="data row2 col7" >15.39%</td>
+      <td id="T_efd85_row2_col8" class="data row2 col8" >10.00%</td>
+      <td id="T_efd85_row2_col9" class="data row2 col9" >10.00%</td>
+    </tr>
+  </tbody>
+</table>
+</td></th>
+    </table>
+
+    <p>
+       <div class="all_tables">
+        <div class="sub_table">
+            <img src=risk_averse_2.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=risk_moderate_2.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=moderate_2.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=moderate_aggressive_2.png width="500" class="center" border="3px blue">
+
+        </div>
+           <div class="sub_table">
+            <img src=aggressive_2.png width="500" class="center" border="3px blue">
+
+        </div>
+
+    </div>
+    </p>
+
+
+    <P><strong><em>BUILD WEALTH / BRONZE / MVO_MAXIMIZE_RETURN_SUBJECT_TO </em></strong></P>
+    <table class="table3">
+            <th><td><style type="text/css">
+#T_fbffd_row0_col1, #T_fbffd_row0_col3, #T_fbffd_row0_col5, #T_fbffd_row0_col7, #T_fbffd_row0_col9, #T_fbffd_row1_col3, #T_fbffd_row1_col9, #T_fbffd_row2_col1, #T_fbffd_row2_col5, #T_fbffd_row2_col7, #T_fbffd_row2_col9 {
+  background-color: yellow;
+}
+</style>
+<table id="T_fbffd">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_fbffd_level0_col0" class="col_heading level0 col0" colspan="2">Risk Averse</th>
+      <th id="T_fbffd_level0_col2" class="col_heading level0 col2" colspan="2">Risk Moderate</th>
+      <th id="T_fbffd_level0_col4" class="col_heading level0 col4" colspan="2">Moderate</th>
+      <th id="T_fbffd_level0_col6" class="col_heading level0 col6" colspan="2">Moderate Aggressive</th>
+      <th id="T_fbffd_level0_col8" class="col_heading level0 col8" colspan="2">Aggressive</th>
+    </tr>
+    <tr>
+      <th class="blank level1" >&nbsp;</th>
+      <th id="T_fbffd_level1_col0" class="col_heading level1 col0" >March 31</th>
+      <th id="T_fbffd_level1_col1" class="col_heading level1 col1" >Feb 28</th>
+      <th id="T_fbffd_level1_col2" class="col_heading level1 col2" >March 31</th>
+      <th id="T_fbffd_level1_col3" class="col_heading level1 col3" >Feb 28</th>
+      <th id="T_fbffd_level1_col4" class="col_heading level1 col4" >March 31</th>
+      <th id="T_fbffd_level1_col5" class="col_heading level1 col5" >Feb 28</th>
+      <th id="T_fbffd_level1_col6" class="col_heading level1 col6" >March 31</th>
+      <th id="T_fbffd_level1_col7" class="col_heading level1 col7" >Feb 28</th>
+      <th id="T_fbffd_level1_col8" class="col_heading level1 col8" >March 31</th>
+      <th id="T_fbffd_level1_col9" class="col_heading level1 col9" >Feb 28</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Instrument Symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+      <th class="blank col9" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_fbffd_level0_row0" class="row_heading level0 row0" >VT</th>
+      <td id="T_fbffd_row0_col0" class="data row0 col0" >95.00%</td>
+      <td id="T_fbffd_row0_col1" class="data row0 col1" >84.61%</td>
+      <td id="T_fbffd_row0_col2" class="data row0 col2" >93.00%</td>
+      <td id="T_fbffd_row0_col3" class="data row0 col3" >0.00%</td>
+      <td id="T_fbffd_row0_col4" class="data row0 col4" >92.00%</td>
+      <td id="T_fbffd_row0_col5" class="data row0 col5" >84.61%</td>
+      <td id="T_fbffd_row0_col6" class="data row0 col6" >91.00%</td>
+      <td id="T_fbffd_row0_col7" class="data row0 col7" >93.00%</td>
+      <td id="T_fbffd_row0_col8" class="data row0 col8" >90.00%</td>
+      <td id="T_fbffd_row0_col9" class="data row0 col9" >0.00%</td>
+    </tr>
+    <tr>
+      <th id="T_fbffd_level0_row1" class="row_heading level0 row1" >BNDW</th>
+      <td id="T_fbffd_row1_col0" class="data row1 col0" >0.00%</td>
+      <td id="T_fbffd_row1_col1" class="data row1 col1" >0.00%</td>
+      <td id="T_fbffd_row1_col2" class="data row1 col2" >0.00%</td>
+      <td id="T_fbffd_row1_col3" class="data row1 col3" >93.00%</td>
+      <td id="T_fbffd_row1_col4" class="data row1 col4" >0.00%</td>
+      <td id="T_fbffd_row1_col5" class="data row1 col5" >0.00%</td>
+      <td id="T_fbffd_row1_col6" class="data row1 col6" >0.00%</td>
+      <td id="T_fbffd_row1_col7" class="data row1 col7" >0.00%</td>
+      <td id="T_fbffd_row1_col8" class="data row1 col8" >0.00%</td>
+      <td id="T_fbffd_row1_col9" class="data row1 col9" >92.00%</td>
+    </tr>
+    <tr>
+      <th id="T_fbffd_level0_row2" class="row_heading level0 row2" >VNQ</th>
+      <td id="T_fbffd_row2_col0" class="data row2 col0" >5.00%</td>
+      <td id="T_fbffd_row2_col1" class="data row2 col1" >15.39%</td>
+      <td id="T_fbffd_row2_col2" class="data row2 col2" >7.00%</td>
+      <td id="T_fbffd_row2_col3" class="data row2 col3" >7.00%</td>
+      <td id="T_fbffd_row2_col4" class="data row2 col4" >8.00%</td>
+      <td id="T_fbffd_row2_col5" class="data row2 col5" >15.39%</td>
+      <td id="T_fbffd_row2_col6" class="data row2 col6" >9.00%</td>
+      <td id="T_fbffd_row2_col7" class="data row2 col7" >7.00%</td>
+      <td id="T_fbffd_row2_col8" class="data row2 col8" >10.00%</td>
+      <td id="T_fbffd_row2_col9" class="data row2 col9" >8.00%</td>
+    </tr>
+  </tbody>
+</table>
+</td></th>
+        </table>
+
+    <p>
+       <div class="all_tables">
+        <div class="sub_table">
+            <img src=risk_averse_3.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=risk_moderate_3.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=moderate_3.png width="500" class="center" border="3px blue">
+
+        </div>
+         <div class="sub_table">
+            <img src=moderate_aggressive_3.png width="500" class="center" border="3px blue">
+
+        </div>
+           <div class="sub_table">
+            <img src=aggressive_3.png width="500" class="center" border="3px blue">
+
+        </div>
+
+    </div>
+    </p>
+
+    </body>
+</html>
